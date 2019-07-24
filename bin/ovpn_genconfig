@@ -318,6 +318,7 @@ fi
 
 cat > "$conf" <<EOF
 server $(getroute $OVPN_SERVER)
+ifconfig-pool-persist ipp.txt
 verb 3
 key $EASYRSA_PKI/private/${OVPN_CN}.key
 ca $EASYRSA_PKI/ca.crt
